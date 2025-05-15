@@ -29,7 +29,10 @@ new #[Layout('layouts.guest')] class extends Component
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form wire:submit.prevent="login">
+    <form wire:submit.prevent="login" class="space-y-4">
+        <div class="mb-4 text-sm text-gray-600">
+            {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
+        </div>
 
         <!-- Email Address -->
         <div>

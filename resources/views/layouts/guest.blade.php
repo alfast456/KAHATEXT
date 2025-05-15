@@ -27,7 +27,8 @@
                 {{ $slot }}
             </div>
         </div>
-        @livewireScripts
+        <script src="{{ asset('vendor/livewire/livewire.js') }}"></script>
+@livewireScripts
 
         
     </body>

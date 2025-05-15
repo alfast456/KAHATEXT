@@ -17,4 +17,3 @@ Route::get('/dashboard', [MonitoringController::class, 'index'])
     ->name('monitoring.index')
     ->middleware(['auth', 'verified']);
 require __DIR__.'/auth.php';
-
