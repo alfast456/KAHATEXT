@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Session;
 use Livewire\Attributes\Layout;
 use Livewire\Volt\Component;
 
+
 new #[Layout('layouts.guest')] class extends Component
 {
     public LoginForm $form;
@@ -20,7 +21,7 @@ new #[Layout('layouts.guest')] class extends Component
 
         Session::regenerate();
 
-        $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
+        $this->redirectIntended(default: route('monitoring.index', absolute: false), navigate: true);
     }
 }; ?>
 
@@ -28,7 +29,11 @@ new #[Layout('layouts.guest')] class extends Component
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form wire:submit="login">
+    <form wire:submit.prevent="login" class="space-y-4">
+        <div class="mb-4 text-sm text-gray-600">
+            {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
+        </div>
+
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
