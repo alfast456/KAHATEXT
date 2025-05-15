@@ -1,9 +1,13 @@
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
     </IfModule>
 
     RewriteEngine On
+    # RewriteBase /KAHATEXT/public/  # Uncomment jika dibutuhkan
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
@@ -22,4 +26,16 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+
+    # Fix Livewire routes (for JS + /livewire/update)
+    RewriteCond %{REQUEST_URI} ^/livewire
+    RewriteRule ^ index.php [L]
+
+    # GUNAKAN INI JIKA PAKAI SUBFOLDER (cth: KAHATEXT)
+    RewriteBase /KAHATEXT/public/
+
+    # Handle Livewire /update
+    RewriteCond %{REQUEST_URI} ^/KAHATEXT/public/livewire
+    RewriteRule ^ index.php [L]
+
 </IfModule>

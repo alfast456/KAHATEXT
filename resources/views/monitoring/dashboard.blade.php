@@ -20,7 +20,7 @@
                             </div>
                             <div class="px-3 text-right basis-1/3">
                                 <div
-                                    class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-tl from-purple-700 to-pink-500">
+                                    class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-tl from-blue-600 to-cyan-400">
                                     <i class="ni leading-none ni-money-coins text-lg relative top-3.5 text-white"></i>
                                 </div>
                             </div>
@@ -45,7 +45,7 @@
                             </div>
                             <div class="px-3 text-right basis-1/3">
                                 <div
-                                    class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-tl from-purple-700 to-pink-500">
+                                    class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-tl from-blue-600 to-cyan-400">
                                     <i class="ni leading-none ni-world text-lg relative top-3.5 text-white"></i>
                                 </div>
                             </div>
@@ -70,7 +70,7 @@
                             </div>
                             <div class="px-3 text-right basis-1/3">
                                 <div
-                                    class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-tl from-purple-700 to-pink-500">
+                                    class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-tl from-blue-600 to-cyan-400">
                                     <i class="ni leading-none ni-paper-diploma text-lg relative top-3.5 text-white"></i>
                                 </div>
                             </div>
@@ -95,7 +95,7 @@
                             </div>
                             <div class="px-3 text-right basis-1/3">
                                 <div
-                                    class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-tl from-purple-700 to-pink-500">
+                                    class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-tl from-blue-600 to-cyan-400">
                                     <i class="ni leading-none ni-cart text-lg relative top-3.5 text-white"></i>
                                 </div>
                             </div>
@@ -666,7 +666,7 @@
                                 <span
                                     class="w-6.5 h-6.5 text-base absolute left-4 z-10 inline-flex -translate-x-1/2 items-center justify-center rounded-full bg-white text-center font-semibold">
                                     <i
-                                        class="relative z-10 text-transparent ni leading-none ni-key-25 leading-pro bg-gradient-to-tl from-purple-700 to-pink-500 bg-clip-text fill-transparent"></i>
+                                        class="relative z-10 text-transparent ni leading-none ni-key-25 leading-pro bg-gradient-to-tl from-blue-600 to-cyan-400 bg-clip-text fill-transparent"></i>
                                 </span>
                                 <div class="ml-11.252 pt-1.4 lg:max-w-120 relative -top-1.5 w-auto">
                                     <h6 class="mb-0 font-semibold leading-normal text-sm text-slate-700">Unlock packages

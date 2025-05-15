@@ -22,7 +22,7 @@
 </head>
 <!-- Styles -->
 @wirechatStyles
-@vite('resources/js/app.js') {{-- Atau bootstrap.js jika kamu split --}}
+@vite(['resources/css/app.css', 'resources/js/app.js'])
 @livewireStyles
 
 <body class="m-0 font-sans antialiased font-normal text-base leading-default bg-gray-50 text-slate-500">
