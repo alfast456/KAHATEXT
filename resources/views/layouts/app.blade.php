@@ -35,6 +35,22 @@
         </div>
         <script src="{{ asset('vendor/livewire/livewire.js') }}"></script>
 @livewireScripts
-
+<script>
+    document.addEventListener('livewire:load', () => {
+      // Listen for the moment WireChat itself fires its "ready" event:
+      document.addEventListener('wirechat:ready', e => {
+        // e.detail.id is the Livewire component ID
+        const chat = Livewire.find(e.detail.id)
+        if (! chat) {
+          console.error('WireChat component not found:', e.detail.id)
+          return
+        }
+        // Now safely join the channel:
+        chat.controller.joinChannel()
+      })
+    })
+  </script>
+  
+  
     </body>
 </html>

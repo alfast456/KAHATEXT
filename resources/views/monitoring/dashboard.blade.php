@@ -175,7 +175,7 @@
                                         <td class="p-2 align-middle bg-transparent border-b whitespace-nowrap">
                                             <div class="flex px-2 py-1">
                                                 <div>
-                                                    <img src="../assets/img/small-logos/logo-xd.svg"
+                                                    <img src="{{asset('/assets/img/small-logos/logo-xd.svg')}}"
                                                         class="inline-flex items-center justify-center mr-4 text-white transition-all duration-200 ease-soft-in-out text-sm h-9 w-9 rounded-xl"
                                                         alt="xd" />
                                                 </div>
@@ -189,7 +189,7 @@
                                                 <a href="javascript:;"
                                                     class="relative z-20 inline-flex items-center justify-center w-6 h-6 text-white transition-all duration-200 border-2 border-white border-solid rounded-full ease-soft-in-out text-xs hover:z-30"
                                                     data-target="tooltip_trigger" data-placement="bottom">
-                                                    <img src="../assets/img/team-1.jpg" class="w-full rounded-full"
+                                                    <img src="{{asset('/assets/img/team-1.jpg')}}" class="w-full rounded-full"
                                                         alt="team1" />
                                                 </a>
                                                 <div data-target="tooltip"
@@ -202,7 +202,7 @@
                                                 <a href="javascript:;"
                                                     class="relative z-20 inline-flex items-center justify-center w-6 h-6 -ml-4 text-white transition-all duration-200 border-2 border-white border-solid rounded-full ease-soft-in-out text-xs hover:z-30"
                                                     data-target="tooltip_trigger" data-placement="bottom">
-                                                    <img src="../assets/img/team-2.jpg" class="w-full rounded-full"
+                                                    <img src="{{asset('/assets/img/team-2.jpg')}}" class="w-full rounded-full"
                                                         alt="team2" />
                                                 </a>
                                                 <div data-target="tooltip"
@@ -215,7 +215,7 @@
                                                 <a href="javascript:;"
                                                     class="relative z-20 inline-flex items-center justify-center w-6 h-6 -ml-4 text-white transition-all duration-200 border-2 border-white border-solid rounded-full ease-soft-in-out text-xs hover:z-30"
                                                     data-target="tooltip_trigger" data-placement="bottom">
-                                                    <img src="../assets/img/team-3.jpg" class="w-full rounded-full"
+                                                    <img src="{{asset('/assets/img/team-3.jpg')}}" class="w-full rounded-full"
                                                         alt="team3" />
                                                 </a>
                                                 <div data-target="tooltip"
@@ -228,7 +228,7 @@
                                                 <a href="javascript:;"
                                                     class="relative z-20 inline-flex items-center justify-center w-6 h-6 -ml-4 text-white transition-all duration-200 border-2 border-white border-solid rounded-full ease-soft-in-out text-xs hover:z-30"
                                                     data-target="tooltip_trigger" data-placement="bottom">
-                                                    <img src="../assets/img/team-4.jpg" class="w-full rounded-full"
+                                                    <img src="{{asset('/assets/img/team-4.jpg')}}" class="w-full rounded-full"
                                                         alt="team4" />
                                                 </a>
                                                 <div data-target="tooltip"
@@ -264,7 +264,7 @@
                                         <td class="p-2 align-middle bg-transparent border-b whitespace-nowrap">
                                             <div class="flex px-2 py-1">
                                                 <div>
-                                                    <img src="../assets/img/small-logos/logo-atlassian.svg"
+                                                    <img src="{{asset('/assets/img/small-logos/logo-atlassian.svg')}}"
                                                         class="inline-flex items-center justify-center mr-4 text-white transition-all duration-200 ease-soft-in-out text-sm h-9 w-9 rounded-xl"
                                                         alt="atlassian" />
                                                 </div>
@@ -278,7 +278,7 @@
                                                 <a href="javascript:;"
                                                     class="relative z-20 inline-flex items-center justify-center w-6 h-6 text-white transition-all duration-200 border-2 border-white border-solid rounded-full ease-soft-in-out text-xs hover:z-30"
                                                     data-target="tooltip_trigger" data-placement="bottom">
-                                                    <img src="../assets/img/team-2.jpg" class="w-full rounded-full"
+                                                    <img src="{{asset('/assets/img/team-2.jpg')}}" class="w-full rounded-full"
                                                         alt="team5" />
                                                 </a>
                                                 <div data-target="tooltip"
@@ -291,7 +291,7 @@
                                                 <a href="javascript:;"
                                                     class="relative z-20 inline-flex items-center justify-center w-6 h-6 -ml-4 text-white transition-all duration-200 border-2 border-white border-solid rounded-full ease-soft-in-out text-xs hover:z-30"
                                                     data-target="tooltip_trigger" data-placement="bottom">
-                                                    <img src="../assets/img/team-4.jpg" class="w-full rounded-full"
+                                                    <img src="{{asset('/assets/img/team-4.jpg')}}" class="w-full rounded-full"
                                                         alt="team6" />
                                                 </a>
                                                 <div data-target="tooltip"
@@ -327,7 +327,7 @@
                                         <td class="p-2 align-middle bg-transparent border-b whitespace-nowrap">
                                             <div class="flex px-2 py-1">
                                                 <div>
-                                                    <img src="../assets/img/small-logos/logo-slack.svg"
+                                                    <img src="{{asset('/assets/img/small-logos/logo-slack.svg')}}"
                                                         class="inline-flex items-center justify-center mr-4 text-white transition-all duration-200 ease-soft-in-out text-sm h-9 w-9 rounded-xl"
                                                         alt="team7" />
                                                 </div>
@@ -341,7 +341,7 @@
                                                 <a href="javascript:;"
                                                     class="relative z-20 inline-flex items-center justify-center w-6 h-6 text-white transition-all duration-200 border-2 border-white border-solid rounded-full ease-soft-in-out text-xs hover:z-30"
                                                     data-target="tooltip_trigger" data-placement="bottom">
-                                                    <img src="../assets/img/team-3.jpg" class="w-full rounded-full"
+                                                    <img src="{{asset('/assets/img/team-3.jpg')}}" class="w-full rounded-full"
                                                         alt="team8" />
                                                 </a>
                                                 <div data-target="tooltip"
@@ -354,7 +354,7 @@
                                                 <a href="javascript:;"
                                                     class="relative z-20 inline-flex items-center justify-center w-6 h-6 -ml-4 text-white transition-all duration-200 border-2 border-white border-solid rounded-full ease-soft-in-out text-xs hover:z-30"
                                                     data-target="tooltip_trigger" data-placement="bottom">
-                                                    <img src="../assets/img/team-1.jpg" class="w-full rounded-full"
+                                                    <img src="{{asset('/assets/img/team-1.jpg')}}" class="w-full rounded-full"
                                                         alt="team9" />
                                                 </a>
                                                 <div data-target="tooltip"
@@ -390,7 +390,7 @@
                                         <td class="p-2 align-middle bg-transparent border-b whitespace-nowrap">
                                             <div class="flex px-2 py-1">
                                                 <div>
-                                                    <img src="../assets/img/small-logos/logo-spotify.svg"
+                                                    <img src="{{asset('/assets/img/small-logos/logo-spotify.svg')}}"
                                                         class="inline-flex items-center justify-center mr-4 text-white transition-all duration-200 ease-soft-in-out text-sm h-9 w-9 rounded-xl"
                                                         alt="spotify" />
                                                 </div>
@@ -404,7 +404,7 @@
                                                 <a href="javascript:;"
                                                     class="relative z-20 inline-flex items-center justify-center w-6 h-6 text-white transition-all duration-200 border-2 border-white border-solid rounded-full ease-soft-in-out text-xs hover:z-30"
                                                     data-target="tooltip_trigger" data-placement="bottom">
-                                                    <img src="../assets/img/team-4.jpg" class="w-full rounded-full"
+                                                    <img src="{{asset('/assets/img/team-4.jpg')}}" class="w-full rounded-full"
                                                         alt="user1" />
                                                 </a>
                                                 <div data-target="tooltip"
@@ -417,7 +417,7 @@
                                                 <a href="javascript:;"
                                                     class="relative z-20 inline-flex items-center justify-center w-6 h-6 -ml-4 text-white transition-all duration-200 border-2 border-white border-solid rounded-full ease-soft-in-out text-xs hover:z-30"
                                                     data-target="tooltip_trigger" data-placement="bottom">
-                                                    <img src="../assets/img/team-3.jpg" class="w-full rounded-full"
+                                                    <img src="{{asset('/assets/img/team-3.jpg')}}" class="w-full rounded-full"
                                                         alt="user2" />
                                                 </a>
                                                 <div data-target="tooltip"
@@ -430,7 +430,7 @@
                                                 <a href="javascript:;"
                                                     class="relative z-20 inline-flex items-center justify-center w-6 h-6 -ml-4 text-white transition-all duration-200 border-2 border-white border-solid rounded-full ease-soft-in-out text-xs hover:z-30"
                                                     data-target="tooltip_trigger" data-placement="bottom">
-                                                    <img src="../assets/img/team-4.jpg" class="w-full rounded-full"
+                                                    <img src="{{asset('/assets/img/team-4.jpg')}}" class="w-full rounded-full"
                                                         alt="user3" />
                                                 </a>
                                                 <div data-target="tooltip"
@@ -443,7 +443,7 @@
                                                 <a href="javascript:;"
                                                     class="relative z-20 inline-flex items-center justify-center w-6 h-6 -ml-4 text-white transition-all duration-200 border-2 border-white border-solid rounded-full ease-soft-in-out text-xs hover:z-30"
                                                     data-target="tooltip_trigger" data-placement="bottom">
-                                                    <img src="../assets/img/team-1.jpg" class="w-full rounded-full"
+                                                    <img src="{{asset('/assets/img/team-1.jpg')}}" class="w-full rounded-full"
                                                         alt="user4" />
                                                 </a>
                                                 <div data-target="tooltip"
@@ -479,7 +479,7 @@
                                         <td class="p-2 align-middle bg-transparent border-b whitespace-nowrap">
                                             <div class="flex px-2 py-1">
                                                 <div>
-                                                    <img src="../assets/img/small-logos/logo-jira.svg"
+                                                    <img src="{{asset('/assets/img/small-logos/logo-jira.svg')}}"
                                                         class="inline-flex items-center justify-center mr-4 text-white transition-all duration-200 ease-soft-in-out text-sm h-9 w-9 rounded-xl"
                                                         alt="jira" />
                                                 </div>
@@ -493,7 +493,7 @@
                                                 <a href="javascript:;"
                                                     class="relative z-20 inline-flex items-center justify-center w-6 h-6 text-white transition-all duration-200 border-2 border-white border-solid rounded-full ease-soft-in-out text-xs hover:z-30"
                                                     data-target="tooltip_trigger" data-placement="bottom">
-                                                    <img src="../assets/img/team-4.jpg" class="w-full rounded-full"
+                                                    <img src="{{asset('/assets/img/team-4.jpg')}}" class="w-full rounded-full"
                                                         alt="user5" />
                                                 </a>
                                                 <div data-target="tooltip"
@@ -529,7 +529,7 @@
                                         <td class="p-2 align-middle bg-transparent border-0 whitespace-nowrap">
                                             <div class="flex px-2 py-1">
                                                 <div>
-                                                    <img src="../assets/img/small-logos/logo-invision.svg"
+                                                    <img src="{{asset('/assets/img/small-logos/logo-invision.svg')}}"
                                                         class="inline-flex items-center justify-center mr-4 text-white transition-all duration-200 ease-soft-in-out text-sm h-9 w-9 rounded-xl"
                                                         alt="invision" />
                                                 </div>
@@ -543,7 +543,7 @@
                                                 <a href="javascript:;"
                                                     class="relative z-20 inline-flex items-center justify-center w-6 h-6 text-white transition-all duration-200 border-2 border-white border-solid rounded-full ease-soft-in-out text-xs hover:z-30"
                                                     data-target="tooltip_trigger" data-placement="bottom">
-                                                    <img src="../assets/img/team-1.jpg" class="w-full rounded-full"
+                                                    <img src="{{asset('/assets/img/team-1.jpg')}}" class="w-full rounded-full"
                                                         alt="user6" />
                                                 </a>
                                                 <div data-target="tooltip"
@@ -556,7 +556,7 @@
                                                 <a href="javascript:;"
                                                     class="relative z-20 inline-flex items-center justify-center w-6 h-6 -ml-4 text-white transition-all duration-200 border-2 border-white border-solid rounded-full ease-soft-in-out text-xs hover:z-30"
                                                     data-target="tooltip_trigger" data-placement="bottom">
-                                                    <img src="../assets/img/team-4.jpg" class="w-full rounded-full"
+                                                    <img src="{{asset('/assets/img/team-4.jpg')}}" class="w-full rounded-full"
                                                         alt="user7" />
                                                 </a>
                                                 <div data-target="tooltip"

@@ -3,7 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-
+use livewire\Livewire;
+use Illuminate\Support\Facades\Route;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -19,6 +20,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // Customize Livewire asset and AJAX endpoints if your app uses a subfolder
+        Livewire::setScriptRoute(function ($handle) {
+            return Route::get('/KAHATEXT/public/livewire/livewire.js', $handle);
+        });
+
+        Livewire::setUpdateRoute(function ($handle) {
+            return Route::post('/KAHATEXT/public/livewire/update', $handle);
+        });
     }
 }

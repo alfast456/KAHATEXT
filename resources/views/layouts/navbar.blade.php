@@ -47,10 +47,10 @@ new class extends Component {
                     <a href="{{ url('chats') }}">
                         <i fixed-plugin-button-nav class="cursor-pointer fa fa-comments"></i>
                         {{-- counter sup message belum di baca --}}
-                        <span
+                        {{-- <span
                             class="sup inline-flex items-center justify-center w-3 h-3 p-3 text-sm font-medium text-red bg-red-500 rounded-full">
                             5
-                        </span>
+                        </span> --}}
                     </a>
                 </li>
                 @auth
