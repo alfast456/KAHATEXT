@@ -14,6 +14,6 @@ Route::post('/logout', function () {
 })->name('logout');
 
 Route::get('/dashboard', [MonitoringController::class, 'index'])
-    ->name('monitoring.index')
+    ->name('dashboard')
     ->middleware(['auth', 'verified']);
 require __DIR__.'/auth.php';
