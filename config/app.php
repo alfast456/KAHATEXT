@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://172.23.39.117/KAHATEXT/public/'),
+    'url' => env('APP_URL', 'http://172.23.44.14/KAHATEXT/public/'),
     'asset_url' => env('ASSET_URL', null),
 
     /*

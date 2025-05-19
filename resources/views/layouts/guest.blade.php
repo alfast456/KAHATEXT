@@ -29,7 +29,21 @@
         </div>
         <script src="{{ asset('vendor/livewire/livewire.js') }}"></script>
 @livewireScripts
+<script>
+    document.addEventListener('chat-opened', (event) => {
+            const conversation = event.detail.conversation;
+            const tag = 'wirechat-notification-' + conversation;
 
+            // Check if navigator.serviceWorker exists
+            if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+                navigator.serviceWorker.controller.postMessage({
+                    type: 'CLOSE_NOTIFICATION',
+                    tag: tag
+                });
+            }
+        });
+  </script>
+  
         
     </body>
 </html>

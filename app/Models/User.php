@@ -23,6 +23,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'verified_at',
     ];
 
     /**
@@ -102,6 +103,71 @@ class User extends Authenticatable
     }
 
     public function canSendMessages(): bool
+    {
+        return $this->hasVerifiedEmail() === true;
+    }
+
+    public function canReceiveMessages(): bool
+    {
+        return $this->hasVerifiedEmail() === true;
+    }
+    public function canAddMembers(): bool
+    {
+        return $this->hasVerifiedEmail() === true;
+    }
+    public function canRemoveMembers(): bool
+    {
+        return $this->hasVerifiedEmail() === true;
+    }
+    public function canDeleteMessages(): bool
+    {
+        return $this->hasVerifiedEmail() === true;
+    }
+    public function canEditMessages(): bool
+    {
+        return $this->hasVerifiedEmail() === true;
+    }
+    public function canEditGroupName(): bool
+    {
+        return $this->hasVerifiedEmail() === true;
+    }
+    public function canEditGroupDescription(): bool
+    {
+        return $this->hasVerifiedEmail() === true;
+    }
+    public function canEditGroupAvatar(): bool
+    {
+        return $this->hasVerifiedEmail() === true;
+    }
+    public function canEditGroupCover(): bool
+    {
+        return $this->hasVerifiedEmail() === true;
+    }
+    public function canEditGroupMembers(): bool
+    {
+        return $this->hasVerifiedEmail() === true;
+    }
+    public function canEditGroupSettings(): bool
+    {
+        return $this->hasVerifiedEmail() === true;
+    }
+    public function canEditGroupPrivacy(): bool
+    {
+        return $this->hasVerifiedEmail() === true;
+    }
+    public function canEditGroupNotifications(): bool
+    {
+        return $this->hasVerifiedEmail() === true;
+    }
+    public function canEditGroupMute(): bool
+    {
+        return $this->hasVerifiedEmail() === true;
+    }
+    public function canEditGroupPin(): bool
+    {
+        return $this->hasVerifiedEmail() === true;
+    }
+    public function canEditGroupUnpin(): bool
     {
         return $this->hasVerifiedEmail() === true;
     }

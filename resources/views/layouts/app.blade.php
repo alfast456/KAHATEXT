@@ -12,7 +12,7 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/app.css'])
         @livewireStyles
     </head>
     <body class="font-sans antialiased">
@@ -35,20 +35,28 @@
         </div>
         <script src="{{ asset('vendor/livewire/livewire.js') }}"></script>
 @livewireScripts
+@vite(['resources/js/app.js'])
+{{-- <script src="https://js.pusher.com/7.0/pusher.min.js"></script> --}}
+{{-- <script>
+    window.Echo.channel('chat-room')
+        .listen('NewChatMessage', (e) => {
+            Livewire.dispatch('messageReceived', { message: e.message });
+        });
+</script>
+ --}}
 <script>
-    document.addEventListener('livewire:load', () => {
-      // Listen for the moment WireChat itself fires its "ready" event:
-      document.addEventListener('wirechat:ready', e => {
-        // e.detail.id is the Livewire component ID
-        const chat = Livewire.find(e.detail.id)
-        if (! chat) {
-          console.error('WireChat component not found:', e.detail.id)
-          return
-        }
-        // Now safely join the channel:
-        chat.controller.joinChannel()
-      })
-    })
+    document.addEventListener('chat-opened', (event) => {
+            const conversation = event.detail.conversation;
+            const tag = 'wirechat-notification-' + conversation;
+
+            // Check if navigator.serviceWorker exists
+            if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+                navigator.serviceWorker.controller.postMessage({
+                    type: 'CLOSE_NOTIFICATION',
+                    tag: tag
+                });
+            }
+        });
   </script>
   
   
