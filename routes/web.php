@@ -2,8 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MonitoringController;
+use App\Http\Livewire\Components\PackageNameComponent;
+use App\Http\Livewire\Components\LivewireBlade;
+use Illuminate\Support\Facades\Auth;
 
-Route::view('/', 'welcome');
+Route::get('/', function () {
+    return redirect()->route('login');
+});
 
 Route::view('profile', 'profile')
     ->middleware(['auth'])

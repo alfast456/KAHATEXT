@@ -1,56 +1,64 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<head>
+    <!-- ...meta dan css... -->
+    @vite(['resources/css/app.css'])
+    @livewireStyles
+</head>
+<body class="font-sans antialiased">
+    <div class="min-h-screen bg-gray-100">
+        <livewire:layout.navigation />
+        @if (isset($header))
+            <header class="bg-white shadow">
+                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    {{ $header }}
+                </div>
+            </header>
+        @endif
+        <main>
+            {{ $slot }}
+        </main>
+    </div>
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
-
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-        @livewireStyles
-    </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            <livewire:layout.navigation />
-
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
-
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div>
-        <script src="{{ asset('vendor/livewire/livewire.js') }}"></script>
 @livewireScripts
+
+<script src="{{ asset('js/echo.js') }}"></script> {{-- Jika sudah compile dan ada di public/js --}}
+
+@vite(['resources/js/app.js'])
+  <script>
+document.addEventListener('chat-opened', (event) => {
+    const conversation = event.detail.conversation;
+    const tag = 'wirechat-notification-' + conversation;
+
+    // Check if service workers are supported
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.ready.then(registration => {
+            if (registration.active) {
+                registration.active.postMessage({
+                    type: 'CLOSE_NOTIFICATION',
+                    tag: tag
+                });
+            } else {
+                console.warn('Service Worker is registered but not active');
+            }
+        }).catch(err => {
+            console.error('Service Worker registration error:', err);
+        });
+    } else {
+        console.warn('Service Workers are not supported in this browser');
+    }
+});
+</script></body>
 <script>
     document.addEventListener('livewire:load', () => {
-      // Listen for the moment WireChat itself fires its "ready" event:
-      document.addEventListener('wirechat:ready', e => {
-        // e.detail.id is the Livewire component ID
-        const chat = Livewire.find(e.detail.id)
-        if (! chat) {
-          console.error('WireChat component not found:', e.detail.id)
-          return
+        const chatEl = document.getElementById('chat-container');
+        console.log('chat-container:', chatEl);
+        if (chatEl) {
+            const wireId = chatEl.getAttribute('wire:id');
+            console.log('wire:id:', wireId);
+            const comp = Livewire.find(wireId);
+            console.log('Livewire comp:', comp);
         }
-        // Now safely join the channel:
-        chat.controller.joinChannel()
-      })
-    })
-  </script>
-  
-  
-    </body>
+    });
+</script>
 </html>
