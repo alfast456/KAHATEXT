@@ -9,6 +9,7 @@ use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 use Livewire\Attributes\Validate;
 use Livewire\Form;
+use Illuminate\Support\Facades\Redirect;
 
 class LoginForm extends Form
 {
@@ -26,7 +27,7 @@ class LoginForm extends Form
      *
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function authenticate(): void
+    public function authenticate(): string
     {
         $this->ensureIsNotRateLimited();
 
@@ -39,8 +40,21 @@ class LoginForm extends Form
         }
 
         RateLimiter::clear($this->throttleKey());
+
+        return $this->redirectToRole(); // return URL string
     }
 
+    protected function redirectToRole(): string
+    {
+        $user = Auth::user();
+
+        return match ($user->role) {
+            'general'    => route('chats'),
+            'user'       => route('dashboard.user'),
+            'monitoring' => route('dashboard.monitoring'),
+            default      => '/home',
+        };
+    }
     /**
      * Ensure the authentication request is not rate limited.
      */

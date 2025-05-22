@@ -12,8 +12,11 @@ class MonitoringController extends Controller
      *
      * @return \Illuminate\Contracts\View\View
      */
-    public function index()
+    public function __invoke(Request $request)
     {
-        return view('monitoring.dashboard');
+        return view('monitoring.dashboard', [
+            'monitoring' => $request->user(),
+        ]);
     }
+    
 }

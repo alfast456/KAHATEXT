@@ -6,6 +6,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Volt\Component;
 
 
+
 new #[Layout('layouts.guest')] class extends Component
 {
     public LoginForm $form;
@@ -13,16 +14,14 @@ new #[Layout('layouts.guest')] class extends Component
     /**
      * Handle an incoming authentication request.
      */
-    public function login(): void
+     public function login()
     {
-        $this->validate();
+        $redirectUrl = $this->form->authenticate();
 
-        $this->form->authenticate();
-
-        Session::regenerate();
-
-        $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
+        return redirect()->to($redirectUrl); // Redirect dari sini
     }
+
+    
 }; ?>
 
 <div>
